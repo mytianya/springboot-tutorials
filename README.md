@@ -1,6 +1,6 @@
 # codehome出品SpringBoot2.x基础教程
 
-![](https://www.codehome.vip/wp-content/uploads/2020/08/test.png)
+![](https://www.codehome.vip/wp-content/uploads/2020/08/1596516364-扫码_搜索联合传播样式-白色版.png)
 
 ## 已完成系列
 
