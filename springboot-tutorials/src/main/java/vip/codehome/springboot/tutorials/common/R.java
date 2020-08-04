@@ -7,7 +7,6 @@ public class R<T> {
     private int code;
     private T data;
     private String msg;
-
     public R() {
     }
     public static <T> R<T> ok(T data) {
@@ -17,7 +16,6 @@ public class R<T> {
     public static <T> R<T> failed(String msg) {
         return fill( null, ApiCommonCodeEnum.FAIL);
     }
-
     public static <T> R<T> failed(ApiCommonCodeEnum apiEnum) {
         return fill( null, apiEnum);
     }

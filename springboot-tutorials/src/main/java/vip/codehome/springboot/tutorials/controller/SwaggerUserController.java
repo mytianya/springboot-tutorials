@@ -22,8 +22,8 @@ public class SwaggerUserController {
             @ApiResponse(code=400,message="请求无权限")
     })
     @GetMapping("/echo")
-    public String echo(String msg,@RequestHeader(name = "token") String token){
-        return msg;
+    public R<String> echo(String msg,@RequestHeader(name = "token") String token){
+        return R.ok("");
     }
     @ApiOperation(value = "登录接口说明")
     @PostMapping("/login")
