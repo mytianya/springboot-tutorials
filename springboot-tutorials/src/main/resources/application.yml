@@ -1,5 +1,43 @@
-server:
-  port: 8081
+version: 1.0
+author: codhome.vip
+flag: true
+user:
+  userName: codehome
+  age: 18
+  forbidden: true
+random: 10,20,30
+random1:
+  user:
+    - zhangsao
+    - lisi
+    - wangwu
 spring:
-  resources:
-    add-mappings: true
+  profiles:
+    active: dev
+  datasource:
+    url: jdbc:mysql://localhost:3306/plusoft_test?autoReconnect=true&useSSL=false&characterEncoding=utf-8&failOverReadOnly=false
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create
+    #设置数据库方言
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    #打印sql
+    show-sql: true
+---
+
+#配置开发环境
+spring:
+  profiles: dev
+server:
+  port: 9000
+
+---
+
+#配置生产环境
+spring:
+  profiles: prod
+server:
+  port: 9100
