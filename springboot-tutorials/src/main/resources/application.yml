@@ -26,6 +26,19 @@ spring:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     #打印sql
     show-sql: true
+logging:
+  level:
+    #logging name
+    org.springframework.web: DEBUG
+  config: classpath:config/logback-spring.xml
+  pattern:
+    console: %d{yyyy-MMM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{15} - %msg%n
+    file: %d{yyyy-MMM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{15} - %msg%n
+  file:
+    name: app.log
+    path: /var/log/
+    max-size: 50MB
+    max-history: 7
 ---
 
 #配置开发环境
