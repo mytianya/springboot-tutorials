@@ -15,9 +15,9 @@ spring:
   profiles:
     active: dev
   datasource:
-    url: jdbc:mysql://118.24.237.75:3306/plusoft_test?autoReconnect=true&useSSL=false&characterEncoding=utf-8&failOverReadOnly=false
+    url: jdbc:mysql://localhost:3306/plusoft_test?autoReconnect=true&useSSL=false&characterEncoding=utf-8&failOverReadOnly=false
     username: root
-    password: mysql@123!@#
+    password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
