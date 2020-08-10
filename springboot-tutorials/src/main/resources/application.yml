@@ -15,7 +15,7 @@ spring:
   profiles:
     active: dev
   datasource:
-    url: jdbc:mysql://localhost:3306/plusoft_test?autoReconnect=true&useSSL=false&characterEncoding=utf-8&failOverReadOnly=false
+    url: jdbc:mysql://localhost/plusoft_test?autoReconnect=true&useSSL=false&characterEncoding=utf-8&failOverReadOnly=false
     username: root
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -28,16 +28,23 @@ spring:
     show-sql: true
 logging:
   level:
-    #logging name
+    #包的日志级别
     org.springframework.web: DEBUG
+  #自定义log信息
   config: classpath:config/logback-spring.xml
   pattern:
-    console: %d{yyyy-MMM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{15} - %msg%n
-    file: %d{yyyy-MMM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{15} - %msg%n
+    #控制台的日志输出格式
+    console: '%d{yyyy/MM/dd-HH:mm:ss} [%thread] %-5level %logger- %msg%n'
+    #文件的日志输出格式
+    file: '%d{yyyy/MM/dd-HH:mm} [%thread] %-5level %logger- %msg%n'
   file:
+    #日志名称
     name: app.log
-    path: /var/log/
+    #存储的路径
+    path: logs
+    #存储的最大值
     max-size: 50MB
+    #保存时间
     max-history: 7
 ---
 

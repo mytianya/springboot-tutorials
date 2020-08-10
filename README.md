@@ -12,3 +12,4 @@
 - [x] [springboot2.x基础教程：配置文件详解](https://www.codehome.vip/2020/08/06/springboot2-x%e5%9f%ba%e7%a1%80%e6%95%99%e7%a8%8b%ef%bc%9a%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6%e8%af%a6%e8%a7%a3/)
 - [x] [springboot2.x基础教程：集成spring-data-jpa](https://www.codehome.vip/2020/08/08/springboot2-x%e5%9f%ba%e7%a1%80%e6%95%99%e7%a8%8b%ef%bc%9a%e9%9b%86%e6%88%90spring-data-jpa/)
 - [x] [springboot2.x基础教程：单元测试](https://www.codehome.vip/2020/08/09/springboot2-x%e5%9f%ba%e7%a1%80%e6%95%99%e7%a8%8b%ef%bc%9a%e5%8d%95%e5%85%83%e6%b5%8b%e8%af%95/)
+- [x] [springboot2.x基础教程：日志配置](https://www.codehome.vip/2020/08/10/springboot2-x%e5%9f%ba%e7%a1%80%e6%95%99%e7%a8%8b%ef%bc%9a%e6%97%a5%e5%bf%97%e9%85%8d%e7%bd%ae/)

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-
-    <property name="LOGS" value="./logs" />
-
+    <!--获取变量名中关于日志存储的路径与存储名称-->
+    <springProperty scope="context" name="logPath" source="logging.file.path"/>
+    <springProperty scope="context" name="logName" source="logging.file.name"/>
+    <!--输出到控制台的appender-->
     <appender name="Console"
               class="ch.qos.logback.core.ConsoleAppender">
         <layout class="ch.qos.logback.classic.PatternLayout">
@@ -11,10 +12,10 @@
             </Pattern>
         </layout>
     </appender>
-
+    <!--输出到文件的appender-->
     <appender name="RollingFile"
               class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${LOGS}/spring-boot-logger.log</file>
+        <file>${logPath}/${logName}</file>
         <encoder
                 class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
             <Pattern>%d %p %C{1.} [%t] %m%n</Pattern>
@@ -32,16 +33,16 @@
         </rollingPolicy>
     </appender>
 
-    <!-- LOG everything at INFO level -->
-    <root level="info">
-        <appender-ref ref="RollingFile" />
-        <appender-ref ref="Console" />
-    </root>
-
-    <!-- LOG "com.baeldung*" at TRACE level -->
-    <logger name="com.baeldung" level="trace" additivity="false">
-        <appender-ref ref="RollingFile" />
-        <appender-ref ref="Console" />
-    </logger>
-
+    <!--开发环境基本级别为DEBUG-->
+    <springProfile name="dev">
+        <root level="DEBUG">
+            <appender-ref ref="Console"/>
+        </root>
+    </springProfile>
+    <!--生成环境-->
+    <springProfile name="prod">
+        <root level="INFO">
+            <appender-ref ref="RollingFile"/>
+        </root>
+    </springProfile>
 </configuration>
