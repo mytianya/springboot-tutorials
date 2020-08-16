@@ -37,4 +37,8 @@ public class PropController {
     public R propsArray(){
         return R.ok(Arrays.toString(randoms));
     }
+    @GetMapping("/jrebel")
+    public R test(){
+        return R.ok("");
+    }
 }
