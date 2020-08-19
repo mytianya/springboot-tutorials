@@ -2,6 +2,8 @@ package vip.codehome.springboot.tutorials.handler;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.NamedThreadLocal;
+import org.springframework.lang.Nullable;
+import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
@@ -15,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  *@version 1.0
  */
 @Slf4j
-public class LogHandler extends HandlerInterceptorAdapter {
+public class LogHandler implements HandlerInterceptor {
     private NamedThreadLocal<Long> startTimeThreadLocal = new NamedThreadLocal<>("StopWatch-StartTime");
 
     public LogHandler() {
@@ -29,9 +31,7 @@ public class LogHandler extends HandlerInterceptorAdapter {
         return true;//继续流程
     }
 
-    @Override
-    public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
-        super.postHandle(request, response, handler, modelAndView);
+    public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, @Nullable ModelAndView modelAndView) throws Exception {
     }
 
     @Override
@@ -43,8 +43,4 @@ public class LogHandler extends HandlerInterceptorAdapter {
         log.info(String.format("%s consume %d millis", request.getRequestURI(), consumeTime));
     }
 
-    @Override
-    public void afterConcurrentHandlingStarted(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        super.afterConcurrentHandlingStarted(request, response, handler);
-    }
 }

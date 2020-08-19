@@ -16,8 +16,11 @@ public class LogFilterConfiguration {
     public FilterRegistrationBean registrationBean(){
         FilterRegistrationBean registrationBean=new FilterRegistrationBean();
         registrationBean.setFilter(new LogFilter());
+        //匹配的过滤器
         registrationBean.addUrlPatterns("/*");
+        //过滤器名称
         registrationBean.setName("logFilter");
+        //过滤器顺序
         registrationBean.setOrder(1);
         return registrationBean;
     }
