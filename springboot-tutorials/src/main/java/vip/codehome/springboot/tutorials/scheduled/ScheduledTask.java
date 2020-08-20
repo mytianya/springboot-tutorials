@@ -15,8 +15,6 @@ import java.util.concurrent.ScheduledThreadPoolExecutor;
 
 @Slf4j
 public class ScheduledTask {
-    @Autowired
-    ScheduledTaskRegistrar scheduledTaskRegistrar;
     @Scheduled(cron = "*/1 * * * * ?")
     public void cronTask1(){
         try {
