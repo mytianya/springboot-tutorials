@@ -13,8 +13,8 @@ import java.util.List;
 
 @Repository
 public interface UserRepository extends JpaRepository<UserDO,Long> {
-    @Query("from tb_user u where u.userName like :userName")
-    Page<UserDO> findUserDOByUserName(@Param("userName")String userName, Pageable pageable);
+    @Query("from tb_user u where u.name like :name")
+    Page<UserDO> findUserDOByUserName(@Param("name")String name, Pageable pageable);
     Page<UserDO> findAll(Pageable pageable);
-    List<UserDO> findUserDOByAccountAndAgeAndUserNameLike(String account,int age,String userName);
+    List<UserDO> findUserDOByAccountAndAgeAndNameLike(String account,int age,String userName);
 }

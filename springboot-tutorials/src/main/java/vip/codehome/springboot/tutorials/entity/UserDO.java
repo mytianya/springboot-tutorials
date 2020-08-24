@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Entity(name = "tb_user")
@@ -17,13 +18,13 @@ public class UserDO implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(name = "name",nullable = false)
-    String userName;
+    String name;
     String account;
     String passwd;
     int age;
     boolean forbidden;
-    @Temporal(value = TemporalType.TIMESTAMP)
-    Date loginTime;
+//    @Temporal(value = TemporalType.TIMESTAMP)
+    LocalDateTime loginTime;
     @Transient
     String token;
 }

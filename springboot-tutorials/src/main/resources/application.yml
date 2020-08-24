@@ -15,7 +15,7 @@ spring:
   profiles:
     active: dev
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/springboot?autoReconnect=true&useSSL=false&characterEncoding=utf-8&failOverReadOnly=false&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://127.0.0.1:3306/springboot?autoReconnect=true&useSSL=false&characterEncoding=utf-8&failOverReadOnly=false&allowPublicKeyRetrieval=true&allowMultiQueries=true
     username: root
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -26,8 +26,9 @@ spring:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     #打印sql
     show-sql: true
-
-
+mybatis:
+  config-location: classpath:mybatis-config.xml
+  mapper-locations: classpath:mappers/*.xml
 logging:
   level:
     #包的日志级别
