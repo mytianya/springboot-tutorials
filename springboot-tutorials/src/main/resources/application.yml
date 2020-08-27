@@ -12,6 +12,17 @@ random1:
     - lisi
     - wangwu
 spring:
+  redis:
+    timeout: 5000ms
+    lettuce:
+      pool:
+        max-active: 5
+        max-wait: -1
+        max-idle: 10
+  cache:
+    ehcache:
+      config: classpath:ehcache.xml
+    type: redis
   profiles:
     active: dev
   datasource:
@@ -21,7 +32,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
     #设置数据库方言
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     #打印sql
