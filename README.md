@@ -21,3 +21,4 @@
 - [x] [springboot2.x基础教程：过滤器和拦截器详解](https://www.codehome.vip/2020/08/17/springboot2-x%e5%9f%ba%e7%a1%80%e6%95%99%e7%a8%8b%ef%bc%9a%e8%bf%87%e6%bb%a4%e5%99%a8%e5%92%8c%e6%8b%a6%e6%88%aa%e5%99%a8%e8%af%a6%e8%a7%a3/)
 - [x] [springboot2.x基础教程：@Scheduled开启定时任务及源码分析](https://www.codehome.vip/2020/08/20/springboot-scheduled/)
 - [x] [springboot2.x基础教程：集成mybatis最佳实践](https://www.codehome.vip/2020/08/25/springboot-mybatis/)
+- [x] [springboot2.x基础教程：SpringCache缓存抽象详解与Ehcache、Redis缓存配置实战](https://www.codehome.vip/2020/08/29/springboot-cache-redis/)

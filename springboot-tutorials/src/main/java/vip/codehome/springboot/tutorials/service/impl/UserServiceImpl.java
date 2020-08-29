@@ -18,13 +18,19 @@ import java.util.List;
 public class UserServiceImpl implements UserService {
     @Autowired
     UserMapper userMapper;
+
     @Override
-    public List<UserDO> queryUsers() {
-        return null;
+    public List<UserDO> queryUsers(UserDO userDO) {
+        return userMapper.select(userDO);
     }
 
     @Override
-    public List<UserDO> queryUsers1() {
-        return userMapper.select(new UserDO());
+    public void saveUser(UserDO userDO) {
+        userMapper.insert(userDO);
+    }
+
+    @Override
+    public void removeUser(UserDO userDO) {
+        userMapper.delete(userDO);
     }
 }
