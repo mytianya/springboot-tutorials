@@ -17,12 +17,5 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class UserServiceCacheTest {
     @Autowired
     UserService userService;
-    @Test
-    public void testCacheNull(){
-        userService.queryUsers();
-    }
-    @Test
-    public void testCacheList(){
-        userService.queryUsers1();
-    }
+
 }
