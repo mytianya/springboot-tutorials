@@ -22,3 +22,4 @@
 - [x] [springboot2.x基础教程：@Scheduled开启定时任务及源码分析](https://www.codehome.vip/2020/08/20/springboot-scheduled/)
 - [x] [springboot2.x基础教程：集成mybatis最佳实践](https://www.codehome.vip/2020/08/25/springboot-mybatis/)
 - [x] [springboot2.x基础教程：SpringCache缓存抽象详解与Ehcache、Redis缓存配置实战](https://www.codehome.vip/2020/08/29/springboot-cache-redis/)
+- [x] [springboot2.x基础教程：Springmvc参数绑定注解今天彻底搞清楚](https://www.codehome.vip/2020/09/01/springmvc-param-bind/)
