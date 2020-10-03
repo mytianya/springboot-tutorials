@@ -85,7 +85,6 @@
             <artifactId>pagehelper</artifactId>
             <version>5.1.2</version>
         </dependency>
-        <!--cache-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-cache</artifactId>
