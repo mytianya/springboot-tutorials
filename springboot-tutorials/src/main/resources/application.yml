@@ -12,6 +12,11 @@ random1:
     - lisi
     - wangwu
 spring:
+  freemarker:
+    cache: true
+    suffix: .ftl
+    template-loader-path:
+      - classpath:/templates
   redis:
     timeout: 5000ms
     lettuce:
@@ -75,3 +80,4 @@ spring:
   profiles: prod
 server:
   port: 9100
+debug: true

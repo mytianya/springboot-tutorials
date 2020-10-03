@@ -24,7 +24,7 @@ public class UserDO implements Serializable {
     int age;
     boolean forbidden;
 //    @Temporal(value = TemporalType.TIMESTAMP)
-    LocalDateTime loginTime;
+    LocalDateTime loginTime=LocalDateTime.now();
     @Transient
     String token;
 }
