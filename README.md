@@ -23,6 +23,7 @@
 - [x] [springboot2.x基础教程：动手制作一个starter包](https://www.codehome.vip/archives/springboot-starter-use)
 - [x] [springboot2.x基础教程：日志配置](https://www.codehome.vip/archives/springboot-logging)
 - [x] [springboot2.x基础教程：SpringCache缓存抽象详解与Ehcache、Redis缓存配置实战](https://www.codehome.vip/archives/springboot-cache)
+- [x] [SpringBoot2.x基础教程: 事件发布与订阅详解](https://www.codehome.vip/archives/springboot-sub-pub)
 - [x] [贡献一个springboot项目linux shell启动脚本](https://www.codehome.vip/archives/springboot-linux-starter)
 - [x] [SpringBoot通过proguard-maven-plugin插件进行实际项目代码混淆，实测可用](https://www.codehome.vip/archives/springboot-proguard)
 - [x] [SpringBoot项目瘦身打包](https://www.codehome.vip/archives/springboot-package)
