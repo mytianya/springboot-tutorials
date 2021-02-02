@@ -20,26 +20,31 @@ import java.util.concurrent.Future;
 @RequestMapping("/user")
 @Slf4j
 public class UserController {
-   @Autowired
-    UserServiceSyncTask userServiceSyncTask;
-    @GetMapping("/query")
-    public String queryUser(String name){
-        return name;
-    }
-    @PostMapping("/add")
-    public R addUser(@RequestBody UserDO userDO){
-        return R.ok(userDO);
-    }
-    @GetMapping("/cookie")
-    public String testCookie(@CookieValue("token") String token){
-        return token;
-    }
-    @GetMapping("/sync")
-    public R sync() throws ExecutionException, InterruptedException {
-        log.info("进入到发送邮件方法....");
-        userServiceSyncTask.sendEmail();
-        Future<String> res=userServiceSyncTask.echo("aa");
-        return R.ok(res.get());
-    }
+
+  @Autowired
+  UserServiceSyncTask userServiceSyncTask;
+
+  @GetMapping("/query")
+  public String queryUser(String name) {
+    return name;
+  }
+
+  @PostMapping("/add")
+  public R addUser(@RequestBody UserDO userDO) {
+    return R.ok(userDO);
+  }
+
+  @GetMapping("/cookie")
+  public String testCookie(@CookieValue("token") String token) {
+    return token;
+  }
+
+  @GetMapping("/sync")
+  public R sync() throws ExecutionException, InterruptedException {
+    log.info("进入到发送邮件方法....");
+    userServiceSyncTask.sendEmail();
+    Future<String> res = userServiceSyncTask.echo("aa");
+    return R.ok(res.get());
+  }
 
 }

@@ -13,4 +13,5 @@ import org.springframework.context.annotation.Import;
 //@Import({ImportTestServiceSelector.class})
 @Import({ImportTestServiceBeanDefinitionRegistrar.class})
 public class ImportTestService {
+
 }

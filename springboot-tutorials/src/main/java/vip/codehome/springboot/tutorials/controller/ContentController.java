@@ -10,12 +10,13 @@ import java.util.Arrays;
 
 @Controller
 public class ContentController {
-    @RequestMapping("/freemark/{demo}")
-    public String demo(@PathVariable("demo")String demo, Model model){
-        model.addAttribute("userList", Arrays.asList(new UserDO()));
-        model.addAttribute("flag",false);
-        model.addAttribute("copyright","编程之家：www.codehome.vip");
-        return demo;
-    }
+
+  @RequestMapping("/freemark/{demo}")
+  public String demo(@PathVariable("demo") String demo, Model model) {
+    model.addAttribute("userList", Arrays.asList(new UserDO()));
+    model.addAttribute("flag", false);
+    model.addAttribute("copyright", "编程之家：www.codehome.vip");
+    return demo;
+  }
 }
 

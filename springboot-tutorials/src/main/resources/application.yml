@@ -17,6 +17,9 @@ spring:
     suffix: .ftl
     template-loader-path:
       - classpath:/templates
+  elasticsearch:
+    rest:
+      uris: http://192.28.4.23:9200,http://192.28.4.24:9200,http://192.28.4.25:9200
   redis:
     timeout: 5000ms
     lettuce:
