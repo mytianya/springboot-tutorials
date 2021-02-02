@@ -27,6 +27,7 @@ spring:
         max-active: 5
         max-wait: -1
         max-idle: 10
+    host: 192.168.227.128
   cache:
     ehcache:
       config: classpath:ehcache.xml
@@ -34,7 +35,7 @@ spring:
   profiles:
     active: dev
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/springboot?autoReconnect=true&useSSL=false&characterEncoding=utf-8&failOverReadOnly=false&allowPublicKeyRetrieval=true&allowMultiQueries=true
+    url: jdbc:mysql://192.168.227.128:3306/springboot?autoReconnect=true&useSSL=false&characterEncoding=utf-8&failOverReadOnly=false&allowPublicKeyRetrieval=true&allowMultiQueries=true
     username: root
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
