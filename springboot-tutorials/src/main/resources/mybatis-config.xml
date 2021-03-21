@@ -32,17 +32,17 @@
         <setting name="aggressiveLazyLoading" value="false"/>
         <setting name="logImpl" value="org.apache.ibatis.logging.stdout.StdOutImpl"/>
     </settings>
-    <typeAliases>
-        <!--批量别名，默认为别名的规范就是对应包装类的类名首字母变为小写-->
-        <package name="vip.codehome.springboot.tutorials.entity"/>
-    </typeAliases>
-    <plugins>
-        <!--pagehelper分页插件-->
-        <plugin interceptor="com.github.pagehelper.PageInterceptor">
-            <!-- 使用MySQL方言的分页 -->
-            <property name="helperDialect" value="sqlserver"/><!--如果使用mysql，这里value为mysql-->
-            <property name="pageSizeZero" value="true"/>
-        </plugin>
-    </plugins>
+<!--    <typeAliases>-->
+<!--        &lt;!&ndash;批量别名，默认为别名的规范就是对应包装类的类名首字母变为小写&ndash;&gt;-->
+<!--        <package name="vip.codehome.springboot.tutorials.entity"/>-->
+<!--    </typeAliases>-->
+<!--    <plugins>-->
+<!--        &lt;!&ndash;pagehelper分页插件&ndash;&gt;-->
+<!--        <plugin interceptor="com.github.pagehelper.PageInterceptor">-->
+<!--            &lt;!&ndash; 使用MySQL方言的分页 &ndash;&gt;-->
+<!--            <property name="helperDialect" value="sqlserver"/>&lt;!&ndash;如果使用mysql，这里value为mysql&ndash;&gt;-->
+<!--            <property name="pageSizeZero" value="true"/>-->
+<!--        </plugin>-->
+<!--    </plugins>-->
 
 </configuration>

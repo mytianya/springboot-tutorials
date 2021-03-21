@@ -15,6 +15,7 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @XmlRootElement(name = "User")
+@Table(name = "tb_user")
 public class UserDO implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,8 +24,8 @@ public class UserDO implements Serializable {
     String name;
     String account;
     String passwd;
-    int age;
-    boolean forbidden;
+    Integer age=0;
+    Boolean forbidden=true;
 //    @Temporal(value = TemporalType.TIMESTAMP)
     LocalDateTime loginTime=LocalDateTime.now();
     @Transient
