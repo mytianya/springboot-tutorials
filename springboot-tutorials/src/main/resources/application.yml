@@ -46,6 +46,10 @@ spring:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     #打印sql
     show-sql: true
+  batch:
+    initialize-schema: always
+    job:
+      enabled: false #禁止自动执行job需要调用obLaucher.run执行
 mybatis:
   config-location: classpath:mybatis-config.xml
   mapper-locations: classpath:mappers/*.xml

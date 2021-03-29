@@ -1,5 +1,6 @@
 package vip.codehome.springboot.tutorials;
 
+import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
@@ -15,10 +16,10 @@ import tk.mybatis.spring.annotation.MapperScan;
 @EnableAsync
 @ServletComponentScan("vip.codehome.springboot.tutorials.filter")
 @MapperScan(basePackages = "vip.codehome.springboot.tutorials.mapper")
+@EnableBatchProcessing
 public class SpringbootTutorialsApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(SpringbootTutorialsApplication.class, args);
     }
-
 }
