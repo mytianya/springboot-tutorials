@@ -7,6 +7,7 @@ import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.scheduling.annotation.EnableAsync;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 import tk.mybatis.spring.annotation.MapperScan;
 
@@ -17,6 +18,7 @@ import tk.mybatis.spring.annotation.MapperScan;
 @ServletComponentScan("vip.codehome.springboot.tutorials.filter")
 @MapperScan(basePackages = "vip.codehome.springboot.tutorials.mapper")
 @EnableBatchProcessing
+@EnableTransactionManagement
 public class SpringbootTutorialsApplication {
 
     public static void main(String[] args) {
