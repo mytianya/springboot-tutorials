@@ -29,30 +29,37 @@ public class UserServiceTranasction {
   PlatformTransactionManager transactionManager;
   //声明式事务
   @Transactional(propagation = Propagation.REQUIRED,timeout = 3000,rollbackFor = Exception.class)
-  public void save(){
+  public Integer save(Integer id,String name){
     String insertSql="insert into `tb_user`(`id`,`name`)values(?,?);";
-    jdbcTemplate.update(insertSql,"333","codehome");
-    Integer num=jdbcTemplate.queryForObject("select  count(*) from tb_user",Integer.class);
+    jdbcTemplate.update(insertSql,id,name);
+    return jdbcTemplate.queryForObject("select  count(*) from tb_user",Integer.class);
   }
   //编程式事务
-  public void save1(){
+  public Integer save1(Integer id,String name){
     Integer num=transactionTemplate.<Integer>execute((TransactionStatus status)->{
-      jdbcTemplate.execute(String.format("insert into tb_user(id,name) values(%s,%s)",
-          UUID.randomUUID().toString(),"codhome"));
+      try{
+        String insertSql="insert into `tb_user`(`id`,`name`)values(?,?);";
+        jdbcTemplate.update(insertSql,id,name);
+      }catch (Exception e){
+        e.printStackTrace();
+        //标记回滚
+        status.setRollbackOnly();
+      }
       return jdbcTemplate.queryForObject("select  count(*) from tb_user",Integer.class);
     });
+    return num;
   }
   //编程式事务
-  public void save2(){
+  public Integer save2(Integer id,String name){
     TransactionStatus transactionStatus=transactionManager.getTransaction(new DefaultTransactionDefinition());
     try{
-      jdbcTemplate.execute(String.format("insert into tb_user(id,name) values(%s,%s)",
-          UUID.randomUUID().toString(),"codhome"));
+      String insertSql="insert into `tb_user`(`id`,`name`)values(?,?);";
+      jdbcTemplate.update(insertSql,id,name);
         transactionManager.commit(transactionStatus);
       }catch (Exception e){
+        e.printStackTrace();
         transactionManager.rollback(transactionStatus);
-
       }
-
+    return jdbcTemplate.queryForObject("select  count(*) from tb_user",Integer.class);
   }
 }
