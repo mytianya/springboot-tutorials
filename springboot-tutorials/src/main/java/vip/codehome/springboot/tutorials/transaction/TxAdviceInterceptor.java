@@ -29,10 +29,10 @@ import org.springframework.transaction.interceptor.TransactionInterceptor;
  * @createtime 2021/4/6--18:24
  * @description
  **/
-@Aspect
-@Component //事务依然生效
-@Configuration("__tx_advice_interceptor__")
-@ConditionalOnBean(DataSource.class)
+//@Aspect
+//@Component //事务依然生效
+//@Configuration("__tx_advice_interceptor__")
+//@ConditionalOnBean(DataSource.class)
 public class TxAdviceInterceptor {
 
   private Logger logger = LoggerFactory.getLogger(this.getClass());
