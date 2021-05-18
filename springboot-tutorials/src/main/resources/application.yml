@@ -84,6 +84,18 @@ logging:
     max-size: 50MB
     #保存时间
     max-history: 7
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+  health:
+    db:
+      enabled: true
+
 ---
 
 #配置开发环境
