@@ -15,7 +15,7 @@ import java.io.IOException;
  * 是根据Filter类名（注意不是配置的filter的名字）的字母顺序倒序排列
  * ，并且@WebFilter指定的过滤器优先级都高于FilterRegistrationBean配置的过滤器。
  */
-@WebFilter(urlPatterns = "/*",filterName = "authFiler")
+@WebFilter(urlPatterns = "/*",filterName = "authFiler",asyncSupported = true)
 @Slf4j
 public class AuthFilter implements Filter {
     @Override

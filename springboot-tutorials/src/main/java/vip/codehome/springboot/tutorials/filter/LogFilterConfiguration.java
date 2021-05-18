@@ -20,6 +20,7 @@ public class LogFilterConfiguration {
         registrationBean.addUrlPatterns("/*");
         //过滤器名称
         registrationBean.setName("logFilter");
+        registrationBean.setAsyncSupported(true);
         //过滤器顺序
         registrationBean.setOrder(1);
         return registrationBean;
