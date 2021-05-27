@@ -28,4 +28,4 @@
 - [x] [贡献一个springboot项目linux shell启动脚本](https://www.codehome.vip/archives/springboot-linux-starter)
 - [x] [SpringBoot通过proguard-maven-plugin插件进行实际项目代码混淆，实测可用](https://www.codehome.vip/archives/springboot-proguard)
 - [x] [SpringBoot项目瘦身打包](https://www.codehome.vip/archives/springboot-package)
-
+- [x] [SpringBoot集成Quartz分布式任务调度](https://www.codehome.vip/archives/springboot-quartz)
