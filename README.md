@@ -1,4 +1,4 @@
-# [编程之家出品](https://www.codehome.vip/)Springboot series of tutorials for beginners
+# Springboot series of tutorials for beginners
 
 
 ## 已完成系列
