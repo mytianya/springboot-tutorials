@@ -1,6 +1,4 @@
-# [编程之家出品](https://www.codehome.vip/)SpringBoot2.x基础教程
-
-![](https://cdn.jsdelivr.net/gh/mytianya/public-imgbed/img/%E6%89%AB%E7%A0%81_%E6%90%9C%E7%B4%A2%E8%81%94%E5%90%88%E4%BC%A0%E6%92%AD%E6%A0%B7%E5%BC%8F-%E6%A0%87%E5%87%86%E8%89%B2%E7%89%88.png)
+# SpringBoot Tutorial for Beginners
 
 
 ## 已完成系列
@@ -28,4 +26,4 @@
 - [x] [贡献一个springboot项目linux shell启动脚本](https://www.codehome.vip/archives/springboot-linux-starter)
 - [x] [SpringBoot通过proguard-maven-plugin插件进行实际项目代码混淆，实测可用](https://www.codehome.vip/archives/springboot-proguard)
 - [x] [SpringBoot项目瘦身打包](https://www.codehome.vip/archives/springboot-package)
-
+- [x] [SpringBoot集成Quartz分布式任务调度](https://www.codehome.vip/archives/springboot-quartz)
