@@ -14,7 +14,6 @@ import java.util.List;
 
 @RestController
 public class PropController {
-    @Value("${version}")
     float version;
     @Value("${author}")
     String author;

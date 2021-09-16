@@ -4,6 +4,8 @@ spring:
       - org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchDataAutoConfiguration
       - org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration
       - org.springframework.boot.autoconfigure.batch.BatchAutoConfiguration
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+      - tk.mybatis.mapper.autoconfigure.MapperAutoConfiguration
   profiles:
     active: dev
   datasource:
@@ -11,6 +13,9 @@ spring:
     username: root
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      auto-commit: true
+
   jpa:
     hibernate:
       ddl-auto: update
@@ -89,6 +94,8 @@ management:
   health:
     db:
       enabled: true
+    elasticsearch:
+      enabled: false
 version: 1.0
 author: codhome.vip
 flag: true

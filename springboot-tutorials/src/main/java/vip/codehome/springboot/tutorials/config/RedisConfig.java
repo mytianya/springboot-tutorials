@@ -35,7 +35,7 @@ import java.util.stream.Collectors;
  *@description
  *@version 1.0
  */
-@Configuration
+//@Configuration
 @EnableCaching//开启缓存
 public class RedisConfig extends CachingConfigurerSupport {
 

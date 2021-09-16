@@ -16,7 +16,7 @@ import tk.mybatis.spring.annotation.MapperScan;
 @EnableSwagger2
 @EnableAsync
 @ServletComponentScan("vip.codehome.springboot.tutorials.filter")
-@MapperScan(basePackages = "vip.codehome.springboot.tutorials.mapper")
+//@MapperScan(basePackages = "vip.codehome.springboot.tutorials.mapper")
 @EnableBatchProcessing
 @EnableTransactionManagement
 @EnableMBeanExport

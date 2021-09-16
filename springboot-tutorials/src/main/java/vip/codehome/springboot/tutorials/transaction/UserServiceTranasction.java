@@ -19,7 +19,7 @@ import org.springframework.transaction.support.TransactionTemplate;
  * https://studygolang.com/articles/19133
  * https://www.huaweicloud.com/articles/df26a826898e8f02999f3bd861db3d48.html
  **/
-@Service
+//@Service
 public class UserServiceTranasction {
   @Autowired
   JdbcTemplate jdbcTemplate;

@@ -18,8 +18,8 @@ import org.springframework.test.context.junit4.SpringRunner;
  * @createtime 2021/2/2--14:26
  * @description
  **/
-@SpringBootTest
-@RunWith(SpringRunner.class)
+//@SpringBootTest
+//@RunWith(SpringRunner.class)
 public class ESLogCURDTest {
   @Autowired
   private ElasticsearchRestTemplate template;
@@ -31,7 +31,7 @@ public class ESLogCURDTest {
     logDO.setId(UUID.randomUUID().toString());
     logDO.setMsgStatus("success");
     logDO.setLogTime(new Date());
-    logRepository.save(logDO);
+   // logRepository.save(logDO);
   }
   @Test
   public void query(){

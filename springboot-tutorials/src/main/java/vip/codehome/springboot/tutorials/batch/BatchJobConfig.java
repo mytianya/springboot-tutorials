@@ -26,7 +26,7 @@ import java.util.HashMap;
  * https://mrbird.cc/Spring-Batch%E5%85%A5%E9%97%A8.html
  * https://segmentfault.com/a/1190000024439130
  */
-@Configuration
+//@Configuration
 public class BatchJobConfig {
 
     @Bean

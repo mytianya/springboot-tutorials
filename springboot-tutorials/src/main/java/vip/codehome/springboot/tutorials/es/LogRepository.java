@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
  * @createtime 2021/2/2--14:25
  * @description
  **/
-@Repository
-public interface LogRepository extends ElasticsearchRepository<LogDO,String> {
+//@Repository
+public interface LogRepository {//extends ElasticsearchRepository<LogDO,String> {
 
 }
