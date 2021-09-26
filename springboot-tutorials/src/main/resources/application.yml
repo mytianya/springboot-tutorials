@@ -15,7 +15,10 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     hikari:
       auto-commit: true
-
+  servlet:
+    multipart:
+      max-request-size: 20MB
+      max-file-size: 20MB
   jpa:
     hibernate:
       ddl-auto: update
